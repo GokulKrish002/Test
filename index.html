@@ -4,82 +4,98 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME PAGE</title>
-    <style>
-        body{
-            background-color: #F9F2ED;
-        }
-        hr{
-            size: 5px;
-            background-color: aqua;
-            width: 35%;
-            border-style: dotted;
-        }
-    </style>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <title>Profile Page</title>
 </head>
 <body>
-    <table cellspacing="20px">
-        <tr>
-            <td><img height="200px" width="200px" src="images/MY IMAGE.jpg"></td>
-            <td><h1>Gokul Krish</h1>
-                <p>Batchuler of ISM</p>
-                <P>UI and UX Developer</P>
-            </td>
-        </tr>
-    </table>
-<hr>
-    <h2>Intrest</h2>
-    <ul>
-        <li>Gaming</li>
-        <li>Coding</li>
-        <li>cycling</li>
-    </ul>
-<hr>
-    <h2>Education</h2>
-    <table cellspacing="20px">
-        <tr>
-            <td>YEAR</td>
-            <td>COURCE</td>
-        </tr>
-        <tr>
-            <td>2016-2017</td>
-            <td>SSLC</td>
-        </tr>
-        <tr>
-            <td>2017-2019</td>
-            <td>HSC</td>
-        </tr>
-        <tr>
-            <td>2019-2022</td>
-            <td>B.Com(ISM)</td>
-        </tr>
-    </table>
-    <hr>
-    <h2>Technical Skills</h2>
-    <table>
-        <tr>
-            <td>C++</td>
-            <td>⭐⭐</td>
-        </tr>
-        <tr>
-            <td>Java</td>
-            <td>⭐⭐⭐</td>
-        </tr>
-        <tr>
-            <td>HTML, CSS, Java Script</td>
-            <td>⭐⭐⭐⭐</td>
-        </tr>
-        <tr>
-            <td>Node JS</td>
-            <td>⭐⭐⭐</td>
-        </tr>
-    </table>
-    <hr>
-    <a href="Hobbies.html">My hobbies</a>
-    <a href="contact me.html">Contact me</a>
-    <br>
-    <hr>
-    <br>
-    <br>
+    <div class="page_bg">
+        <div class="head_bg">
+
+            <div class="row">
+                <div class="col-4 col-md-4 col-lg-2">
+                    <img class="profile_img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIEAAACBCAMAAADQfiliAAAAMFBMVEXk5ueutLeqsLTq6+yyuLvAxcfT1tjY29y4vcDg4uPO0dPKztC8wcTn6end3+HQ1NXO0aCsAAAC2ElEQVR4nO2ayXbrIAxAGQ0YZP//39ZDkqYZsORI5Lx3uJssutCtEJOwUp1Op9PpdDqdTqfzXwLw97d5+JB9XCl+Ts0lAIaijb5ijPbBtoyvsr6Lf7FwQ7tEjO4x/E4MTRRAxdfx1zzkBgoQ3sZfFaK8wFiJv1XDJJuGI4GVJCow1IaggUK9Bm4I1kJyGAGtvVQpgMcJaDMIKaCKYEfGwKLjay2yMsGIT4HQfECW4YbE8oyciVccu4CCQhFYpgO7AXYtuFLYDyyEqbjDLYBejW4EZgNLHARtRu7ZQE0B++YwkQ0icykGsoFmNhjIAobZYP4XDZgr8fs5+H4d0OeCYzZIZAPu9eD7a6KNVIOZV0BBpu7OE7OBoh3SlkLkPygSt2f+exPxiGK4DygLE2kYRG6vlMOyzM2RkgSB68KCxSfBCDXV8Cc19hX5AnpVMuyr0U3BoxTMLNhOwyxLsm1NxCZtxLpIO4fVaKSq8MbBHdr4Bk3+UitH9tviK953dsWbyjeF5M2LPBidm4TfsMk/vrEYN6qmb02ghuK0uaCjD23jbw6QpjDmhTlM7cOvAmB/gaavfWCX/37OvkTntjFwLha/ZCItf5GPrlLIZa/8x5mwEPMgOiCgQo7u1US8F9mKUqSxbYN/88z4bOH5Hz/tlJ/yXpUwJTAWxZJ9WlN5l4gzV0lAeP/IeujAgJ2qe+GBgxs+3azXTeh0/N3hs4M70NtHz+RPyuHDBOyY0x8FAL2X/M5hPFUNMHMk4KJQzhiQ2zZV6Ld55PUID/U2bbkFqArsGaAq0Ft3KPC1gPvSgg7+PpVkBPDdJSA3cPEKqCd5oSLYDVArE72PT1FAjIMlP++SQExJtu3oNcePwcIp0IiHULky3Dn6NALz3dmHlINhOHEsJ2K+PAhHE5L4wc05qv1GyPIC9S2S/rXJCVx1c5DblO6oGSRnGlB9BLvvDYlRE+h0Op3Od/kBmOwiVrAapnoAAAAASUVORK5CYII=" alt="">
+                </div>
+                <div class="col-8 col-md-8 col-lg-10">
+                    <h1 class="textC_1">Gokul Krish</h1>
+                    <h4 class="textC_2">Batchuler of B.com(ISM)</h4>
+                    <h5 class="textC_2">UI and UX Developer</h5>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-2">
+                <div class="side_bar">
+                    <h2>this is side panel</h2>
+                    <ul class="list-unstyled">
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="body_bg">
+                    <h2>Education Qualification</h2>
+                    <table class="table table-borderless table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">S.No</th>
+                                <th scope="col-lg-3">Education</th>
+                                <th scope="col-lg-3">Year</th>
+                                <th scope="col-lg-3">percentage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td class="col-lg-3">B.com (ISM)</td>
+                                <td class="col-lg-3">2022</td>
+                                <td class="col-lg-3">74%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td class="col-lg-3">12th(HSC)</td>
+                                <td class="col-lg-3">2019</td>
+                                <td class="col-lg-3">58%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td class="col-lg-3">10th(SSLC)</td>
+                                <td class="col-lg-3">2017</td>
+                                <td class="col-lg-3">63%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
 </body>
 </html>

@@ -94,10 +94,3 @@ console.log(true == 1);
 */
 
 //strict Equality operator (datatype + value)
-console.log(1 === 1); //number === number
-console.log('1' === 1); //string === number
-
-
-console.log(1 == 1);//number == number
-console.log('1' == 1); //string == number
-console.log("gokul is working on JSp");

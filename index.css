@@ -1,5 +1,58 @@
 
-img{
-    height: 200px;
-    width: 400px;
+
+:root {
+    --background: #FFF8EA;
+    --background1: #815B5B;
+    --background3: #9E7676;
+    --text1: #594545;
+    --text2: #594545;
+}
+
+/* :root{
+    --background:#f54d42;
+    --background1: #ff8356 ;
+    --background3:#ffcd00;
+    --text1:#f5f5f5;
+    --text2:#f5f5f5; 
+} */
+
+h1 th td {
+    color: #f5f5f5;
+}
+
+.profile_img {
+    height: 3cm;
+    width: 3cm;
+}
+
+.textC_1 {
+    color: var(--text1);
+}
+
+.textC_2 {
+    color: var(--text2);
+}
+
+.page_bg {
+    background-color: var(--background);
+    padding: 1%;
+}
+
+.head_bg {
+    background-color: var(--background1);
+    border-radius: 15px;
+    padding: 1%;
+}
+
+.side_bar {
+    border-radius: 10px;
+    margin-left: 1%;
+    background-color: var(--background3);
+    padding: 2%;
+}
+
+.body_bg {
+    border-radius: 10px;
+    background-color: var(--background3);
+    padding: 1%;
 }
