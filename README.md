@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @GokulKrish002
+- 👋 Hi, I’m Gokul
 - 👀 I’m interested in Programming
 - 🌱 I’m currently learning Full stack web developing
 - 💞️ I’m looking to collaborate...
