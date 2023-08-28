@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+        border: 1px solid black;
+        width: 100%;
+        overflow: auto;
+    }
+
+    .grid-input {
+        border-top: 2px solid;
+        border-radius: 0px;
+    }
+</style>
+
+<body>
+    <div class="grid-container">
+        <div class="grid">
+            Hello their<br>
+            <input type="text" name="gc1[gc-no]" class="grid-input">
+        </div>
+        <div class="grid">
+            Hello1<br>
+            <input type="text" name="gc1[truck-name]" class="grid-input">
+        </div>
+        <div class="grid">
+            Hello2<br>
+            <input type="text" name="gc1[driver]" class="grid-input truck-expences-0" value="0">
+        </div>
+        <div class="grid">
+            Hello3<br>
+            <input type="text" name="gc1[hire-rate]" class="grid-input truck-expences-0" value="0">
+        </div>
+        <div class="grid">
+            Hello4<br>
+            <input type="text" name="gc1[advance-rupees]" class="grid-input truck-expences-0" value="0">
+        </div>
+        <div class="grid">
+            Hello5<br>
+            <input type="text" name="gc1[balance]" class="grid-input truck-expences-0" value="0">
+        </div>
+        <div class="grid">
+            Hello6<br>
+            <input type="text" name="gc1[tax]" class="grid-input show-truck-expences-0" value="0">
+        </div>
+        <div class="grid">
+            Hello7<br>
+            <input type="text" name="gc1[gst]" class="grid-input">
+        </div>
+        <div class="grid">
+            Hello8<br>
+            <input type="text" name="gc1[minimum-balance]" class="grid-input">
+        </div>
+        <div class="grid">
+            Hello9<br>
+            <input type="text" name="gc1[extra-column]" class="grid-input">
+        </div>
+
+
+    </div>
+    <button onclick="add_row()">ADD ROW</button>
+
+
+    <script>
+        let newelement;
+        let Element_row_count = 1;
+        let dp = new DOMParser
+        let parent_element = document.querySelector('.grid-container')
+        let element_name = 'script' 
+
+
+        function add_row() {
+            let template_element = `<div class="grid">
+            <input type="text" class="grid-input" name="gc${Element_row_count}[gc-no]">
+        </div>
+        <div class="grid">
+            <input type="text" class="grid-input" name="gc${Element_row_count}[truck-name]">
+        </div>
+        <div class="grid">
+            <input type="text" class="grid-input truck-expences-${Element_row_count}" oninput="add_truck_expences${Element_row_count}" name="gc${Element_row_count}[driver]" value="0">
+        </div>
+        <div class="grid">
+            <input type="text" class="grid-input truck-expences-${Element_row_count}" oninput="add_truck_expences${Element_row_count}" name="gc${Element_row_count}[hire-rate]" value="0">
+        </div>
+        <div class="grid">
+            <input type="text" class="grid-input truck-expences-${Element_row_count}" oninput="add_truck_expences${Element_row_count}" name="gc${Element_row_count}[advance-rupees]" value="0">
+        </div>
+        <div class="grid">
+            <input type="text" class="grid-input truck-expences-${Element_row_count}" oninput="add_truck_expences${Element_row_count}" name="gc${Element_row_count}[balance]" value="0">
+        </div>
+        <div class="grid">
+            <input type="text" class="grid-input show-truck-expences-${Element_row_count}" name="gc${Element_row_count}[tax]" value="0">
+        </div>
+        <div class="grid">
+            <input type="text" class="grid-input" name="gc${Element_row_count}[gst]">
+        </div>
+        <div class="grid">
+            <input type="text" class="grid-input" name="gc${Element_row_count}[minimum-balance]">
+        </div>
+        <div class="grid">
+            <input type="text" class="grid-input" name="gc${Element_row_count}[extra-column]">
+        </div>;`;
+
+        let formulas = `function add_truck_expences${Element_row_count}(){let value = 0;let truckExpences = document.querySelectorAll('.truck-expences-${Element_row_count}');for (let i = 0; i < truckExpences.length; i++){if(truckExpences[i] != ""){let expences = parseInt(truckExpences[i].value);value = value + expences}}document.querySelector('.show-truck-expences-${Element_row_count}').value = value}`;
+
+        newelement = dp.parseFromString(template_element, "text/html")
+        // for debug purposes
+        // console.log(newelement.body)
+        // console.log(newelement.body.childNodes[0])
+        for (let i = 0; i < newelement.body.childElementCount; i + 2) {
+            parent_element.appendChild(newelement.body.childNodes[i]) 
+        }
+        document.scripts[1].innerText += formulas;
+        console.log("row count:" + Element_row_count + " has been inserted" );
+         Element_row_count++; 
+        }
+
+        // document.querySelector("body").innerHTML ="new script";
+    </script>
+    <script></script>
+
+</body>
+
+</html>
