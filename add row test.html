@@ -37,15 +37,18 @@
         </div>
         <div class="grid">
             Hello3<br>
-            <input type="text" name="gc0[hire-rate]" class="grid-input truck-expences-0" oninput="addexpances()" value="0">
+            <input type="text" name="gc0[hire-rate]" class="grid-input truck-expences-0" oninput="addexpances()"
+                value="0">
         </div>
         <div class="grid">
             Hello4<br>
-            <input type="text" name="gc0[advance-rupees]" class="grid-input truck-expences-0" oninput="addexpances()" value="0">
+            <input type="text" name="gc0[advance-rupees]" class="grid-input truck-expences-0" oninput="addexpances()"
+                value="0">
         </div>
         <div class="grid">
             Hello5<br>
-            <input type="text" name="gc0[balance]" class="grid-input truck-expences-0" oninput="addexpances()" value="0">
+            <input type="text" name="gc0[balance]" class="grid-input truck-expences-0" oninput="addexpances()"
+                value="0">
         </div>
         <div class="grid">
             Hello6<br>
@@ -73,7 +76,7 @@
         let Element_row_count = 1;
         let dp = new DOMParser
         let parent_element = document.querySelector('.grid-container')
-        let element_name = 'script' 
+        let element_name = 'script'
 
         function add_row() {
             let template_element = `<div class="grid">
@@ -83,16 +86,16 @@
             <input type="text" class="grid-input" name="gc${Element_row_count}[truck-name]">
         </div>
         <div class="grid">
-            <input type="text" name="gc${Element_row_count}[driver]" class="grid-input truck-expences-${Element_row_count}" oninput="add_truck_expences_${Element_row_count}()" value="0">
+            <input type="text" name="gc${Element_row_count}[driver]" class="grid-input truck-expences-${Element_row_count}" oninput="add_truck_expences(${Element_row_count})" value="0">
         </div>
         <div class="grid">
-            <input type="text" name="gc${Element_row_count}[hire-rate]" class="grid-input truck-expences-${Element_row_count}" oninput="add_truck_expences_${Element_row_count}()" value="0">
+            <input type="text" name="gc${Element_row_count}[hire-rate]" class="grid-input truck-expences-${Element_row_count}" oninput="add_truckadd_truck_expences(${Element_row_count})" value="0">
         </div>
         <div class="grid">
-            <input type="text" name="gc${Element_row_count}[advance-rupees]" class="grid-input truck-expences-${Element_row_count}" oninput="add_truck_expences_${Element_row_count}()" value="0">
+            <input type="text" name="gc${Element_row_count}[advance-rupees]" class="grid-input truck-expences-${Element_row_count}" oninput="add_truck_expences(${Element_row_count})" value="0">
         </div>
         <div class="grid">
-            <input type="text" name="gc${Element_row_count}[balance]" class="grid-input truck-expences-${Element_row_count}" oninput="add_truck_expences_${Element_row_count}()" value="0">
+            <input type="text" name="gc${Element_row_count}[balance]" class="grid-input truck-expences-${Element_row_count}" oninput="add_truck_expences(${Element_row_count})" value="0">
         </div>
         <div class="grid">
             <input type="text" class="grid-input show-truck-expences-${Element_row_count}" name="gc${Element_row_count}[tax]" value="0">
@@ -107,25 +110,25 @@
             <input type="text" class="grid-input" name="gc${Element_row_count}[extra-column]">
         </div>;`;
 
-        let formulas = `function add_truck_expences_${Element_row_count}(){let value = 0;let truckExpences = document.querySelectorAll('.truck-expences-${Element_row_count}');for (let i = 0; i < truckExpences.length; i++){if(truckExpences[i] != ""){let expences = parseInt(truckExpences[i].value);value = value + expences}}document.querySelector('.show-truck-expences-${Element_row_count}').value = value;console.log(value)}`;
+            // let formulas = `function add_truck${Element_row_count}_expences(){let value = 0;let truckExpences = document.querySelectorAll('.truck-expences-${Element_row_count}');for (let i = 0; i < truckExpences.length; i++){if(truckExpences[i] != ""){let expences = parseInt(truckExpences[i].value);value = value + expences}}document.querySelector('.show-truck-expences-${Element_row_count}').value = value};`;
 
-        newelement = dp.parseFromString(template_element, "text/html")
-        // for debug purposes
-        // console.log(newelement.body)
-        // console.log(newelement.body.childNodes[0])
-        for (let i = 0; i < newelement.body.childElementCount; i + 2) {
-            parent_element.appendChild(newelement.body.childNodes[i]) 
-        }
-        document.scripts[1].innerText += formulas;
-        console.log("row count:" + Element_row_count + " has been inserted" );
-         Element_row_count++; 
+            newelement = dp.parseFromString(template_element, "text/html")
+            // for debug purposes
+            // console.log(newelement.body)
+            // console.log(newelement.body.childNodes[0])
+            for (let i = 0; i < newelement.body.childElementCount; i + 2) {
+                parent_element.appendChild(newelement.body.childNodes[i])
+            }
+            // document.scripts[1].innerText += formulas;
+            console.log("row count:" + Element_row_count + " has been inserted");
+            Element_row_count++;
         }
 
-        function addexpances(){
+        function addexpances() {
             let value = 0;
             let truckExpences = document.querySelectorAll('.truck-expences-0');
-            for (let i = 0; i < truckExpences.length; i++){
-                if(truckExpences[i] != ""){
+            for (let i = 0; i < truckExpences.length; i++) {
+                if (truckExpences[i] != "") {
                     let expences = parseInt(truckExpences[i].value);
                     value = value + expences
                 }
@@ -133,7 +136,20 @@
             document.querySelector('.show-truck-expences-0').value = value
         }
     </script>
-    <script></script>
+    <script>
+
+    </script>
+    <script>function add_truck_expences(row_number) {
+            let value = 0; let truckExpences = document.querySelectorAll('.truck-expences-' + row_number);
+            for (let i = 0; i < truckExpences.length; i++) {
+                if (truckExpences[i] != "") {
+                    let expences = parseInt(truckExpences[i].value);
+                    value = value + expences
+                }
+            }
+            document.querySelector('.show-truck-expences-' + row_number).value = value
+        };
+    </script>
 
 </body>
 
